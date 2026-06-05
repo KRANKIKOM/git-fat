@@ -1,2 +1,0 @@
-[console_scripts]
-git-fat = git_fat.cli:main
