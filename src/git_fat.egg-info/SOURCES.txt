@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/git_fat/__init__.py
+src/git_fat/__main__.py
+src/git_fat/cli.py
+src/git_fat/core.py
+src/git_fat.egg-info/PKG-INFO
+src/git_fat.egg-info/SOURCES.txt
+src/git_fat.egg-info/dependency_links.txt
+src/git_fat.egg-info/entry_points.txt
+src/git_fat.egg-info/top_level.txt
