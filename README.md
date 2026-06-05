@@ -1,3 +1,16 @@
+# git-fat (Python 3 + Docker)
+
+Modern Python 3 port of [git-fat](https://github.com/jedbrown/git-fat), packaged to run in Docker.
+
+**Quick start:** see [DOCKER.md](DOCKER.md) for build, install, and test instructions.
+
+```bash
+docker build -t git-fat:latest .
+export PATH="/path/to/this/repo:$PATH"   # git-fat wrapper script
+git fat init
+./test.sh                                  # all tests run in Docker
+```
+
 # Introduction
 Checking large binary files into a source repository (Git or otherwise) is a bad idea because repository size quickly becomes unreasonable.
 Even if the instantaneous working tree stays manageable, preserving repository integrity requires all binary files in the entire project history, which given the typically poor compression of binary diffs, implies that the repository size will become impractically large.
@@ -10,7 +23,7 @@ Some people recommend checking binaries into different repositories or even not 
 * selective control of which large files to pull into the local store
 * local fat object stores can be shared between multiple clones, even by different users
 * can easily support fat object stores distributed across multiple hosts
-* depends only on stock Python and rsync
+* depends only on stock Python 3, rsync, and git (delivered via Docker image)
 
 ## Related projects
 * [git-annex](http://git-annex.branchable.com) is a far more comprehensive solution, but with less transparent workflow and with more dependencies.
